@@ -47,3 +47,8 @@ ul li:hover {
   text-decoration: underline;
   color: black;
 }
+
+a {
+  text-decoration: none; /* removes underline */
+  color: inherit;         /* inherits color from parent */
+}
