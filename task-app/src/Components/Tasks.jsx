@@ -59,27 +59,27 @@ function Tasks() {
     </button>
   </form>
 
-  {/* Task List */}
-  <ul className="space-y-4 mt-10">
-    {tasks.length > 0 ? (
-      tasks.map((task) => (
-        <li
-          key={task.id}
-          className="w-[100px] p-10 bg-green-600   hover:bg-gray-50 transition-colors border  rounded-md shadow-sm"
+  
+ <div className="m-3 bg-amber-400">
+  {tasks.length > 0 ? (
+    tasks.map((task) => (
+      <div key={task.id}>
+        <span className="m-3 text-gray-800  font-medium mx-3">
+          {task.title}
+        </span>
+        <button
+          onClick={() => deleteTask(task.id)}
+          className=" m-3 bg-red-500 hover:bg-red-600 active:scale-95 transition-transform text-white w-30 rounded-md shadow"
         >
-          <span className="text-gray-800   bg-black-600 font-medium mx-3">{task.title}</span>
-          <button
-            onClick={() => deleteTask(task.id)}
-            className="bg-red-500 hover:bg-red-600 active:scale-95 transition-transform text-white  p-9 rounded-md shadow"
-          >
-             Delete
-          </button>
-        </li>
-      ))
-    ) : (
-      <li className="text-center text-gray-500 italic">No tasks found.</li>
-    )}
-  </ul>
+          Delete
+        </button>
+      </div>
+    ))
+  ) : (
+    <p>No tasks available</p>
+  )}
+</div>
+
 
 </div>
 
