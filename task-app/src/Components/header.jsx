@@ -11,10 +11,11 @@ const Header = () => {
         </div>
 
         <div id="left">
-          <ul>
-            <li>About</li>
-            <li>Service</li>
-            <li><Link to="/team">Team</Link></li>
+          <ul>     
+            <li> <Link to="/"> Home </Link></li>   
+             <li> <Link to="/Tasks"> Tasks</Link></li>   
+            {/* <li> <Link to="/About"> About</Link></li>
+            <li><Link to="/team">Team</Link></li> */}
           </ul>
         </div>
       </div>
